@@ -27,7 +27,7 @@ public class Menu{
                     sql = "SHOW TABLES";
                     Main.getSQL(cn, sql);
                 } else if (y.equals("3")){
-
+                    
                 } else if (y.equals("4")){
                     System.out.println("Escribe la tabla que quieras borrar de la lista: ");
                     sql = "SHOW TABLES";
