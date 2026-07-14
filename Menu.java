@@ -8,7 +8,7 @@ public class Menu{
         String y = "";
         Integer colum = 0;
         while (!y.equals("5")){
-            System.out.println("Estas dentro de: " + nombre.toUpperCase() + " Puedes: 1.Crear una tabla 2.Mirar las tablas existentes 3.Añadir informacion 4.Borrar Tabla 5.Volver");
+            System.out.println("Estas dentro de: " + nombre.toUpperCase() + " Puedes: 1.Crear una tabla 2.Mirar las tablas existentes 3.Elejir tabla 4.Borrar Tabla 5.Volver");
             y = entrada.nextLine();
                 if (y.equals("1")){
                     System.out.println("Da el nombre da la tabla que quieras crear: ");
@@ -22,12 +22,15 @@ public class Menu{
                     }
                     sql += ");";
                     Main.setSQL(cn, sql);
-
                 } else if (y.equals("2")){
                     sql = "SHOW TABLES";
                     Main.getSQL(cn, sql);
                 } else if (y.equals("3")){
-                    
+                    System.out.println("elije una tabla a la cual ver sus columnas y añadir informacion en estas");
+                    sql = "SHOW TABLES";
+                    Main.getSQL(cn, sql);
+                    String tabla = entrada.nextLine();
+                    Add_INFtable.add_inftable(cn, sql, tabla, entrada);
                 } else if (y.equals("4")){
                     System.out.println("Escribe la tabla que quieras borrar de la lista: ");
                     sql = "SHOW TABLES";
