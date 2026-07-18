@@ -1,0 +1,12 @@
+# Archivos de configuración de VS Code y Java
+.classpath
+.project
+.settings/
+bin/
+
+# Librerías (lo que te estaba dando problemas)
+lib/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
